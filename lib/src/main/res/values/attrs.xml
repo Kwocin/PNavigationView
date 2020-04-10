@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="PNavigatioinView">
+        <attr name="iconSize" format="dimension" />
+        <attr name="labelSize" format="dimension" />
+        <attr name="labelColor" format="color" />
+        <attr name="menu" format="reference" />
+        <attr name="showLabel" format="boolean" />
+        <attr name="showMiniBar" format="boolean" />
+        <attr name="miniBarColor" format="color" />
+        <attr name="miniBarHeight" format="dimension" />
+    </declare-styleable>
+</resources>
