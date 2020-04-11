@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -23,7 +23,14 @@ android {
     }
 
 }
-
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.9.2'
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -31,4 +38,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+publish {
+    repoName = "extension"
+    userOrg = 'pulis'//bintray.com用户名
+    groupId = 'ink.girigiri'//jcenter上的路径
+    artifactId = 'PNavigationView'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'this is for test'//描述，不重要
+    website = 'https://github.com/NoirYun/PNavigationView.git'//网站，最好有，不重要
 }
