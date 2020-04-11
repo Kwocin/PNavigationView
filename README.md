@@ -27,4 +27,18 @@ navigation_menu.xml
     <item android:id="@+id/item4" android:title="mine" android:icon="@drawable/ic_account_box_white_24dp"/>
 </menu>
 ```
+自定义属性
+```
+<declare-styleable name="PNavigatioinView">
+        <attr name="iconSize" format="dimension" />
+        <attr name="labelSize" format="dimension" />
+        <attr name="labelColor" format="color" />
+        <attr name="menu" format="reference" />
+        <attr name="showLabel" format="boolean" />
+        <attr name="showMiniBar" format="boolean" />
+        <attr name="miniBarColor" format="color" />
+        <attr name="miniBarHeight" format="dimension" />
+    </declare-styleable>
+```
+
 run app
